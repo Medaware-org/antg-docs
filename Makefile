@@ -1,8 +1,8 @@
-docs.pdf: docs.tex
-	xelatex --interaction batchmode docs.tex
+root.pdf: root.tex
+	xelatex --interaction batchmode root.tex
 
-open: docs.pdf
-	open docs.pdf
+open: root.pdf
+	open root.pdf
 
 clean:
 	rm *.pdf *.aux *.log

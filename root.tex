@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[a4paper, top=25mm, left=15mm, right=15mm, bottom=25mm]{geometry}
+\usepackage{multicol}
+
+\pagestyle{fancy}
+
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.1pt}
+
+\fancyhead[L] {
+	Official\hspace{1.5mm}Medaware\hspace{1.5mm}Anterogradia\texttrademark\hspace{1.5mm}Documentation
+}
+\fancyhead [C] {}
+\fancyhead[R] {
+	ANTG v1.0.0
+}
+
+\newcommand{\versionpill}[1] {
+	\tikz[baseline] {
+		\node[fill=gray!20, rounded corners=2.4mm, text height=1.9ex, text depth=0.5ex, inner xsep=2mm, inner ysep=0.5mm, yshift=0.65ex] {
+			\textsf{\small #1}
+		};
+	}
+}
+
+\newcommand{\docentry}[2] {
+	\noindent
+	\versionpill{#1}
+	\textbf{#2}\hspace{2mm}\rule[0.7mm]{2cm}{0.1pt}\\[3mm]
+}
+
+\newlength{\entryspacing}
+\setlength{\entryspacing}{3mm}
+
+\newcommand{\spacing} {
+	\vspace{\entryspacing}
+}
+
+\begin{document}
+	\input{sections/stdlib}
+\end{document}
