@@ -1,2 +1,2 @@
-## Medawre Anterogradia™ Documentation
-Docs for MaW ANTG
+### Medawre Anterogradia™ Documentation
+The official LaTeX documentation for Medaware Anterogradia
