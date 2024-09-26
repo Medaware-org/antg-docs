@@ -1,6 +1,6 @@
 \section{Standard Library Functions}
 \vspace{1.5mm}
-\begin{multicols}{2}
+\begin{multicols*}{2}
     \docentry{v1.0.0}{about}
     It is mandatory for all Anterogradia libraries to implement an \textit{about} function.
     The standard library is no exception to this rule. The standard implementation provides basic information
@@ -91,6 +91,7 @@
     \begin{verbatim}
 			param (key = "binaryPath")
     \end{verbatim}
+	\columnbreak
     \docentry{v1.0.0}{set}
     This function together with \textit{get} implement the backbone of Anterogradia's memory features. This function creates or modifies
     a variable identified by a \textit{key} with a given \textit{value}. This function always returns an empty string.
@@ -139,7 +140,7 @@
 			len (expr = "Hello!")
 			    => "6"
     \end{verbatim}
-    \spacing
+    \columnbreak
     \docentry{v1.0.0}{astd}
     Generates valid Anterogradia source code from the parser result of the passed \textit{expr}.
     \begin{verbatim}
@@ -222,6 +223,7 @@
 			signflp (expr = "123")
 			    => "-123"
     \end{verbatim}
+	\columnbreak
     \docentry{v1.0.0}{vsignflp}
     Performs a sign-flip on the variable \textit{id} and stores the result in the source variable.
     \begin{verbatim}
@@ -252,4 +254,4 @@
 			}
 			    => "9"
     \end{verbatim}
-\end{multicols}
+\end{multicols*}

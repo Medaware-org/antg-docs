@@ -1,0 +1,92 @@
+\section{Syntax Bindings}
+\begin{multicols*}{2}
+	Since every expression in Anterogradia must either be a string literal or a function call, \textbf{syntax bindings} were
+	introduced in order to solve the readability and practicality issues.
+	Syntax bindings are nothing more than fancy syntactical entities that are directly translated into standard library function
+	calls by the parser.
+	Take a look at the following piece of code as an example:
+	\begin{verbatim}
+		progn {
+		    fun sayHi {
+		        "Hello, World!"
+		    }
+		    eval sayHi
+		}
+	\end{verbatim}
+	This code is simple enough to be able to almost immediately notice the two obvious primitive expressions:
+	\begin{enumerate}
+		\item The \textbf{variadic function} call of \textit{progn}
+		\item The string literal \verb|"Hello, World!"|
+	\end{enumerate}
+	However, here, \verb|fun| and \verb|eval| don't match the established syntax for any ANTG primitive.
+	Thus, you'd be correct to conclude that they are in fact syntax bindings.
+	With the help of the \textit{astd} (AST Dump) function we can take a peek behind what's going in the program above:
+	\begin{verbatim}
+		astd(expr = progn { ...
+	\end{verbatim}
+	Yields:
+	\begin{verbatim}
+		progn {
+		    _fun(
+		        expr = progn {
+		            "Hello, World!"
+		        },
+		        id = "sayHi"
+		    ),
+		    _eval(id = "sayHi")
+		}
+	\end{verbatim}
+	Here you can see that the \verb|fun| entity has been translated to a \verb|_fun| call with a \verb|progn| call as its
+	return value.
+	The function identifier is now also provided as a discrete parameter.
+	As for the \verb|eval| entity, it was also changed a bit by turning into an \verb|_eval| call with the function id
+	as its parameter.
+	The difference is not particularly striking in this example, but it's enough to establish what this technique is all about.
+	Syntax bindings really start to shine when your code samples slightly grow in complexity, as illustrated by the following example:
+	\vfill\columnbreak\noindent
+	Here, the original code $\dots$
+	\begin{verbatim}
+		progn {
+		  fun sayHi <to> {
+		    sequence { "Hello, " &`to "!" }
+		  }
+		  eval sayHi(to = "World")
+		}
+	\end{verbatim}
+	$\dots$ expands to $\dots$
+	\begin{verbatim}
+		progn {
+		  _fun(
+		    expr = progn {
+		      __require_prop(
+		        err = "Required prop not present",
+		        id = "to"
+		      ),
+		      progn {
+		        sequence {
+		          "Hello, ",
+		          get(key = "to"),
+		          "!"
+		        }
+		      }
+		    },
+		    id = "sayHi"
+		  ),
+		  progn {
+		    set(value = "World", key = "to"),
+		    _eval(id = "sayHi")
+		  }
+		}
+	\end{verbatim}
+	To briefly summarize what the parser has done, the most noticeable change is the transformation of would-be
+	discrete function parameters to variable declarations prior to evaluating the stored function.
+	The parser also generates safeguards at the beginning of the function body to ensure that all required
+	variables are in fact present; this is achieved via the \verb|__require_prop| function, which checks
+	for the existence of a variable \textit{id} and causes the runtime to throw an \verb|AntgRuntimeException|
+	with the error message \textit{err} whenever it fails to locate said variable.
+	It is also worth mentioning that since the parser has no notion of functions and variables (after all, this functionality
+	is implemented in the standard library) there is no way for it to check the validity of the parameters passed to the
+	\verb|eval| entity, and thus it will transform any discrete parameters into variable declarations, regardless of whether
+	they're actually required by the callee.
+\end{multicols*}
+\newpage
