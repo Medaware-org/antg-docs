@@ -93,5 +93,20 @@ The following documentation assumes this library was imported as \textit{str}:
 
 		    => "123"
 	\end{verbatim}
+	\docentry{v1.1.0}{substr}
+	Returns the substring of \textit{str} between \textit{start} and \textit{end}.
+	If \textit{end} is not provided, the section ends at the end of the original string.
+	\begin{verbatim}
+		str.substr(str = "Hello, World!",
+		           start = 7)
+
+		    => "World!"
+
+		str.substr(str = "Hello, World!",
+		           start = 0,
+		           end = 5)
+
+		    => "Hello"
+	\end{verbatim}
 \end{multicols*}
 \newpage
