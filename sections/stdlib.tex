@@ -255,13 +255,13 @@
 			}
 			    => "9"
 	\end{verbatim}
-	\docentry{v1.1.0}{while}
+	\docentry{v1.1.0}{\_while}
 	Evaluates \textit{expr} as long as \textit{cond} is \verb|"true"| and returns the value of the \textit{expr}
 	from the final iteration.
 	\begin{verbatim}
 		progn {
 		    `i := 5.0
-		    while (cond = &`i > 1,
+		    _while (cond = &`i > 1,
 		           expr = decrement(id = `i))
 		}
 		    => 1.0
