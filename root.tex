@@ -8,20 +8,23 @@
 
 \pagestyle{fancy}
 
-\setlength{\columnsep}{1.5cm}
-\setlength{\columnseprule}{0.1pt}
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0pt}
+
+\newcommand{\antgversion}{v1.1.0}
 
 \fancyhead[L] {
 	Official\hspace{1.5mm}Medaware\hspace{1.5mm}Anterogradia\texttrademark\hspace{1.5mm}Documentation
 }
 \fancyhead [C] {}
 \fancyhead[R] {
-	ANTG v1.0.0
+	ANTG \antgversion
 }
 
 \newcommand{\versionpill}[1] {
+	\hspace{-3mm}
 	\tikz[baseline] {
-		\node[fill=gray!20, rounded corners=2.4mm, text height=1.9ex, text depth=0.5ex, inner xsep=2mm, inner ysep=0.5mm, yshift=0.65ex] {
+		\node[fill=gray!30, rounded corners=2.4mm, text height=1.9ex, text depth=0.5ex, inner xsep=2mm, inner ysep=0.5mm, yshift=0.65ex] {
 			\textsf{\small #1}
 		};
 	}
@@ -44,4 +47,5 @@
 	\input{sections/intro}
 	\input{sections/bindings}
 	\input{sections/stdlib}
+	\input{sections/strings}
 \end{document}

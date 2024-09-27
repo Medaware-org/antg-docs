@@ -1,0 +1,97 @@
+\section{String Manipulation Library}
+\vspace{1.5mm}
+The following documentation assumes this library was imported as \textit{str}:
+\begin{verbatim}
+	@library "org.medaware.anterogradia.libs.Strings" as str
+\end{verbatim}
+\begin{multicols*}{2}
+	\docentry{v1.1.0}{contains}
+	Returns \verb|"true"| if \textit{str} contains \textit{substr}, otherwise returns \verb|"false"|
+	\begin{verbatim}
+		str.contains(str = "Hello, World!",
+		             substr = "Hello")
+
+		    => "true"
+
+		str.contains(str = "Hello, World!",
+		             substr = "Ketamine")
+
+		    => "false"
+	\end{verbatim}
+	\docentry{v1.1.0}{at}
+	If called only with \textit{str} and \textit{index}, returns the character found at \textit{index} of \textit{str}.
+	When the \textit{insert} parameter is also provided, inserts \textit{insert} at \textit{index} and returns the
+	new string.
+	\begin{verbatim}
+		str.at(str = "Hello, World!", index = 12)
+		    => "!"
+
+		str.at(str = "Hello, World!",
+		       index = 7,
+		       insert = "wonderful ")
+
+		    => "Hello, wonderful World!"
+	\end{verbatim}
+	\docentry{v1.1.0}{upper}
+	Returns \textit{str} in upper case letters.
+	\begin{verbatim}
+		str.upper(str = "Hello")
+		    => "HELLO"
+	\end{verbatim}
+	\docentry{v1.1.0}{lower}
+	Returns \textit{str} in lower case letters.
+	\begin{verbatim}
+		str.lower(str = "hElLo")
+		    => "hello"
+	\end{verbatim}
+	\docentry{v1.1.0}{matches}
+	Returns \verb|"true"| if \textit{str} matches \textit{regex}, otherwise returns \verb|"false"|
+	\begin{verbatim}
+		str.matches(str = "Hello",
+		            regex = "[a-zA-Z]*")
+
+		    => "true"
+
+		str.matches(str = "Hello, World!",
+		            regex = "[a-zA-Z]*")
+
+		    => "false"
+	\end{verbatim}
+	\docentry{v1.1.0}{replace}
+	Replaces occurrences of \textit{regex} in \textit{org} with \textit{str}.
+	By default, this replaces all occurrences.
+	This can be overridden with the \textit{mode} parameter set to \verb|"all"| for the default behavior, or
+	\verb|"first"| to only replace the first occurrence.
+	\begin{verbatim}
+		str.replace(org = "Hello, Weed!",
+		            regex = "Weed",
+		            str = "World")
+
+		    => "Hello, World!"
+
+		str.replace (
+		    org = "I smoke weed in my weed den",
+		    regex = "weed",
+		    str = "cigars",
+		    mode = "first"
+		)
+
+		    => "I smoke cigars in my weed den"
+	\end{verbatim}
+	\docentry{v1.1.0}{trim}
+	Removes leading and trailing white spaces from \textit{str}
+	\begin{verbatim}
+		str.trim(str = "  Hello!  ")
+		    => "Hello!"
+	\end{verbatim}
+	\docentry{v1.1.0}{capture}
+	Runs a RegEx matcher against \textit{str} with \textit{regex} and returns the value of capture group \textit{group}.
+	\begin{verbatim}
+		str.capture(str = "Lorem 123",
+            regex = "[a-zA-Z ]+([0-9]+)",
+            group = 1)
+
+		    => "123"
+	\end{verbatim}
+\end{multicols*}
+\newpage
