@@ -1,8 +1,8 @@
-root.pdf: root.tex
+root.pdf: clean root.tex
 	xelatex --interaction batchmode root.tex
 
 open: root.pdf
 	open root.pdf
 
 clean:
-	rm *.pdf *.aux *.log
+	rm -f *.pdf *.aux *.log
