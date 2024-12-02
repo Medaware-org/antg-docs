@@ -31,10 +31,27 @@
 	}
 }
 
+\newcommand{\bindequiv}[2]{
+	$\texttt{#1}\leftrightarrow\texttt{#2}$
+}
+
+\newcommand{\bindsingle}[1]{
+	$\texttt{#1}$
+}
+
+\newcommand{\docbind}[3]{
+	\subsubsection{#1}\bindequiv{#2}{#3}
+}
+
+\newcommand{\docbinds}[2]{
+	\subsubsection{#1}\bindsingle{#2}
+}
+
 \newcommand{\docentry}[2] {
 	\noindent
 	\versionpill{#1}
 	\textbf{#2}\hspace{2mm}\rule[0.7mm]{2cm}{0.1pt}\\[3mm]
+	\addcontentsline{toc}{subsection}{#2}
 }
 
 \newlength{\entryspacing}
@@ -46,7 +63,9 @@
 
 \begin{document}
 	\input{sections/intro}
-	\input{sections/bindings}
+	\include{sections/toc}
 	\input{sections/stdlib}
 	\input{sections/strings}
+	\input{sections/avis}
+	\input{sections/bindings}
 \end{document}
