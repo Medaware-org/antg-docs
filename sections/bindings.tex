@@ -1,4 +1,6 @@
 \section{Syntax Bindings}
+
+\subsection{General Overview}
 \begin{multicols*}{2}
 	Since every expression in Anterogradia must either be a string literal or a function call, \textbf{syntax bindings} were
 	introduced in order to solve the readability and practicality issues.
@@ -90,3 +92,20 @@
 	they're actually required by the callee.
 \end{multicols*}
 \newpage
+
+\subsection{Standard Library Bindings}
+
+\begin{multicols*}{2}
+	\docbind{Magnitude operator}{len(expr = "Lorem ipsum")}{|"Lorem ipsum"|}
+	\docbind{Conditional expression}{\_if(cond = .., then = "Lorem", else = "Ipsum")}{if (...) \{ "Lorem" \} else \{ "Ipsum" \}}
+	\docbind{Function definition without parameters}{\_fun(id = "foo", expr = "Hello, World")}{fun foo \{ "Hello" \}}
+	\docbinds{Function definition with required property checks}{fun foo <a, b, ..,> \{ "Hello" \}}
+	\docbind{Function call without properties}{\_eval(id = "foo")}{eval foo}
+	\docbinds{Function call with required property assignments}{eval foo (a = .., b = ..,)}
+	\docbind{Lexical atom to string conversion}{"123"}{`123}
+	\docbind{Variable assignment}{set(key = "i", value = "Bar")}{`i := "Bar"}
+	\docbind{Variable retrieval}{get(key = "i")}{\&`i}
+	\docbind{Equality check}{equal(left = 10, right = 20)}{10 = 20}
+	\docbind{Left greater check}{lgt(left = 10, right = 20)}{10 > 20}
+	\docbind{Right greater check}{rgt(left = 10, right = 20)}{10 < 20}
+\end{multicols*}

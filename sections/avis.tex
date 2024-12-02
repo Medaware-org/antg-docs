@@ -1,0 +1,29 @@
+\section{Visual Integration Suite}
+\vspace{1.5mm}
+The \textit{Medaware Design Kit} is a part of \textit{AVIS} and must be implemented as follows:
+\begin{verbatim}
+	@library ”org.medaware.avis.MedawareDesignKit” as avis
+\end{verbatim}
+\begin{multicols*}{2}
+	\docentry{AVIS v2.0}{header}
+	Emits an HTML ``header'' comment.
+	Use case not yet defined.\\[\baselineskip]
+	\docentry{AVIS 2.0}{root}
+	Emits a \verb|div| that wraps the \textit{body} of an article.\\[\baselineskip]
+	\docentry{AVIS 2.0}{heading}
+	Emits a \verb|p| element with the appropriate classes for an article heading.
+	The heading text is determined by \textit{value}.\\[\baselineskip]
+	\docentry{AVIS 2.0}{img}
+	Emits an \verb|img| element with the given \textit{src} address.\\[\baselineskip]
+	\docentry{AVIS 2.0}{subheading}
+	Emits a \verb|p| element styled as a sub-heading (smaller title) through appropriate classes.
+	The value of the subheading is determined by \textit{value}\\[\baselineskip]
+	\docentry{AVIS 2.0}{text}
+	Emits a \verb|p| element styled as regular text.
+	Content defined by \textit{text}\\[\baselineskip]
+	\docentry{AVIS 2.0}{blank}
+	Emits a \verb|div| styled as a visually distinguishable placeholder.\\[\baselineskip]
+	\docentry{AVIS 2.0}{id\_wrap}
+	Emits a \verb|div| which does not apply any styling, but is used by the editor to highlight selected elements.
+\end{multicols*}
+\newpage
