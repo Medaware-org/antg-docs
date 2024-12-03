@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.7)  2 DEC 2024 18:52
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.7)  3 DEC 2024 08:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,27 +509,27 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 No file root.aux.
 \openout1 = `root.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-4.
+5.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -579,9 +579,9 @@ LaTeX Font Info:    ... okay on input line 64.
 
 
 ]
-Overfull \hbox (5.48357pt too wide) in paragraph at lines 131--133
-[]  \TU/lmr/m/n/10 Same as \TU/lmr/m/it/10 lgt\TU/lmr/m/n/10 , but [][]\TU/lmtt
-/m/n/10 (right > left) ? "true" : "false" 
+Overfull \hbox (1.04356pt too wide) in paragraph at lines 131--133
+\TU/lmr/m/n/10 Same as \TU/lmr/m/it/10 lgt\TU/lmr/m/n/10 , but [][]\TU/lmtt/m/n
+/10 (right > left) ? "true" : "false" 
  []
 
 
@@ -604,7 +604,7 @@ $[] \OMS/cmsy/m/n/10 $
 Here is how much of TeX's memory you used:
  13172 strings out of 476683
  270650 string characters out of 5804047
- 1872018 words of memory out of 5000000
+ 1871018 words of memory out of 5000000
  33178 multiletter control sequences out of 15000+600000
  512877 words of font info for 51 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
