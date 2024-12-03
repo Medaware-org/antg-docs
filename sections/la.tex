@@ -1,0 +1,97 @@
+\section{Linear Algebra Library}
+\vspace{1.5mm}
+The following documentation assumes this library was imported as \textit{la}:
+\begin{verbatim}
+	@library "org.medaware.anterogradia.libs.LinearAlgebra" as la
+\end{verbatim}
+\begin{multicols*}{2}
+	\docentry{v2.0.0}{validate}
+	Checks whether \textit{str} is a valid vector object.
+	Returns \verb|"true"| or \verb|"false"| respectively.
+	\begin{verbatim}
+		la.validate(str = "1|2")
+		    => true
+
+		la.validate(str = "Lorem ipsum")
+		    => false
+	\end{verbatim}
+	\docentry{v2.0.0}{v}
+	Creates a vector object from the given dimensions.
+	This function has variadic parameters.
+	\begin{verbatim}
+		la.v { 1 0 2 }
+		    => 1.0|0.0|2.0
+
+		la.v { 2 4 }
+		    => 2.0|4.0
+	\end{verbatim}
+	\docentry{v2.0.0}{sum}
+	A variadic function that returns the sum of the given vectors.
+	All vectors are required to be of the same dimensions.
+	\begin{verbatim}
+		la.sum { la.v { 1 1 } la.v { 2 3 } }
+		    => 3.0|4.0
+	\end{verbatim}
+	\docentry{v2.0.0}{sub}
+	A variadic function that returns the result of subtracting the given vectors left to right.
+	All vectors are required to be of the same dimensions.
+	\begin{verbatim}
+		la.sub { la.v { 1 1 } la.v { 2 3 } }
+		    => -1.0|-2.0
+	\end{verbatim}
+	\docentry{v2.0.0}{mul}
+	Multiplies the vector \textit{v} by a scalar factor \textit{fac}.
+	\begin{verbatim}
+		la.mul(v = la.v { 1 0 }, fac = 5)
+		    => 5.0|0.0
+	\end{verbatim}
+	\docentry{v2.0.0}{div}
+	Divides the vector \textit{v} by a scalar divisor \textit{div}.
+	\begin{verbatim}
+		la.div(v = la.v {10 5}, div = 2)
+		    => 5.0|2.5
+	\end{verbatim}
+	\columnbreak
+	\docentry{v2.0.0}{normalize}
+	Normalizes the vector \textit{v} by dividing each component by the vector magnitude.
+	\begin{verbatim}
+		la.normalize(v = la.v { 4 3 })
+		    => 0.8|0.6
+	\end{verbatim}
+	\docentry{v2.0.0}{len}
+	Computes the magnitude (Euclidean norm) of the vector \textit{v}.
+	\begin{verbatim}
+		la.len(v = la.v { 4 3 })
+		    => 5.0
+	\end{verbatim}
+	\docentry{v2.0.0}{x}
+	Retrieves the X dimension (the 0\textsuperscript{th} dimension) from the vector \textit{v}
+	\begin{verbatim}
+		la.x(v = la.v { 1 2 3 })
+		    => 1.0
+	\end{verbatim}
+	\docentry{v2.0.0}{y}
+	Retrieves the Y dimension (the 1\textsuperscript{st} dimension) from the vector \textit{v}
+	\begin{verbatim}
+		la.y(v = la.v { 1 2 3 })
+		    => 2.0
+	\end{verbatim}
+	\docentry{v2.0.0}{z}
+	Retrieves the Z dimension (the 2\textsuperscript{nd} dimension) from the vector \textit{v}
+	\begin{verbatim}
+		la.z(v = la.v { 1 2 3 })
+		    => 3.0
+	\end{verbatim}
+	\docentry{v2.0.0}{n}
+	Retrieves the \textit{n}\textsuperscript{th} dimension from the vector \textit{v}
+	\begin{verbatim}
+		la.n(v = la.v { 1 2 3 4 }, n = 3)
+		    => 4.0
+	\end{verbatim}
+	\docentry{v2.0.0}{dot}
+	Computes the dot product (``scalar product'') between the vectors \textit{a} and \textit{b}
+	\begin{verbatim}
+		la.dot(a = la.v { 1 2 }, b = la.v { 4 3 })
+		    => 10.0
+	\end{verbatim}
+\end{multicols*}

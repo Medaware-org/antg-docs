@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.7)  3 DEC 2024 08:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.7)  3 DEC 2024 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,13 +569,13 @@ LaTeX Font Info:    ... okay on input line 65.
 ])
 \openout2 = `sections/toc.aux'.
 
-(./sections/toc.tex (./root.toc [2
-
-])
+(./sections/toc.tex (./root.toc)
 \tf@toc=\write4
 \openout4 = `root.toc'.
 
-) [3] (./sections/stdlib.tex [4
+) [2
+
+] (./sections/stdlib.tex [3
 
 
 ]
@@ -589,8 +589,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
-[5] [6] [7]) (./sections/strings.tex [8]) (./sections/avis.tex [9]) (./sections
-/bindings.tex [10]
+[4] [5] [6]) (./sections/strings.tex [7])
+\openout2 = `sections/la.aux'.
+
+(./sections/la.tex [8
+
+]) (./sections/avis.tex [9
+
+
+]) (./sections/bindings.tex [10]
 Overfull \hbox (12.42929pt too wide) in paragraph at lines 100--101
 $[] \OMS/cmsy/m/n/10 $
  []
@@ -600,14 +607,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 $[] \OMS/cmsy/m/n/10 $
  []
 
-[11]) (./root.aux (./sections/toc.aux)) ) 
+[11]) (./root.aux (./sections/toc.aux) (./sections/la.aux)) ) 
 Here is how much of TeX's memory you used:
- 13172 strings out of 476683
- 270650 string characters out of 5804047
+ 13197 strings out of 476683
+ 271412 string characters out of 5804047
  1871018 words of memory out of 5000000
- 33178 multiletter control sequences out of 15000+600000
+ 33198 multiletter control sequences out of 15000+600000
  512877 words of font info for 51 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 100i,12n,104p,413b,809s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,11n,104p,413b,810s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on root.pdf (11 pages).
